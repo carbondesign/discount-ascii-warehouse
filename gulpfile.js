@@ -3,13 +3,15 @@ var gulp    = require('gulp'),
     eslint      = require('gulp-eslint'),
     sourcemaps  = require('gulp-sourcemaps'),
     gutil       = require('gulp-util'),
-    scss        = require('gulp-scss'),
+    sass        = require('gulp-sass'),
+    exec 		= require('child_process').exec,
 
     browserify  = require('browserify')
     babelify    = require('babelify'),
     buffer      = require('vinyl-buffer'),
     source      = require('vinyl-source-stream'),
     livereload  = require('gulp-livereload'),
+    neat 		= require('node-neat').includePaths,
     del         = require('del'),
     runSequence = require('run-sequence');
 
@@ -22,11 +24,10 @@ var path = {
     ENTRY_POINT: './src/index.jsx',
     JSX_DIR: './src/**/*.jsx',
     SCSS_DIR: './src/scss/**/*.scss',
-    CSS_DIR: 'static/css/**/*.css',
-    FONTS_DIR: ['static/fonts/**/*.*'],
-    IMG_DIR: 'static/img/**/*.*',
-    JS_DIR: 'static/js/**/*.js',
-    FAVICON_DIR: 'static/img/favicons/favicon.ico',
+    FONTS_DIR: ['./src/fonts/**/*.*'],
+    IMG_DIR: './src/img/**/*.*',
+    // JS_DIR: 'static/js/**/*.js',
+    // FAVICON_DIR: './src/img/favicons/favicon.ico',
     SITE_ROOT_DIR: './src/**/*.html'
 };
 
@@ -48,25 +49,12 @@ gulp.task('build', function(callback) {
         callback
     )
 });
-//  gulp.task('watch', function(){
-//     livereload.listen();
-//     gulp.watch(path.SCSS_DIR, ['scss']);
-//     gulp.watch(path.SITE_ROOT_DIR);
-//  })
-
-// // Compile scss into CSS & auto-inject into browsers
-// gulp.task('scss', function() {
-//     return gulp.src(path.SCSS_DIR)
-//         .pipe(scss())
-//         .pipe(gulp.dest(path.BUILD_DIR + '/css')),
-//         gulp.src(path.CSS_DIR)
-//           .pipe(livereload())
-
-// });
 
 gulp.task('scss', function() {
    gulp.src(path.SCSS_DIR)
-    .pipe(scss())
+    .pipe(sass({
+            includePaths: require('bourbon-neat').includePaths
+        }))
     .pipe(gulp.dest(path.BUILD_DIR + '/css'))
     .pipe(livereload());
 });
@@ -74,6 +62,7 @@ gulp.task('scss', function() {
 gulp.task('watch', function() {
   livereload.listen();
   gulp.watch(path.SCSS_DIR, ['scss']);
+  gulp.watch(path.JSX_DIR, ['build-jsx']);
 });
 
 // Copy the files in site-root into the build directory.
@@ -93,9 +82,18 @@ gulp.task('img', function() {
         .pipe(gulp.dest(path.BUILD_DIR + '/img'));
 });
 
+//serve
+gulp.task('server', function(cb) {
+    exec('node index.js', function(err, stdout, stderr) {
+        console.log(stdout);
+        console.log(stderr);
+        cb(err);
+    });
+});
+
 // Default task for development
 gulp.task('default', function () {
-        runSequence('build', 'watch');
+        runSequence(['build', 'watch'], 'server');
 });
 
 gulp.task('build-jsx', function(){

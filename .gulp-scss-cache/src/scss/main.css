@@ -1,4 +1,10 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
 body {
-  color: green; }
+  color: purple; }
 
 /*# sourceMappingURL=main.css.map */
