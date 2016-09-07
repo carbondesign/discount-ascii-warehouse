@@ -84,17 +84,21 @@ gulp.task('img', function() {
 
 //serve
 gulp.task('server', function(cb) {
-    exec('node index.js', function(err, stdout, stderr) {
-        console.log(stdout);
-        console.log(stderr);
-        cb(err);
-    });
+    var child = exec('node index.js');
+    child.stdout.on('data', function(data) {
+	    console.log('stdout: ' + data);
+	});
+	child.stderr.on('data', function(data) {
+	    console.log('stdout: ' + data);
+	});
+	child.on('close', function(code) {
+	    console.log('closing code: ' + code);
+	});
+
 });
 
 // Default task for development
-gulp.task('default', function () {
-        runSequence(['build', 'watch'], 'server');
-});
+gulp.task('default', ['build', 'watch', 'server'] );
 
 gulp.task('build-jsx', function(){
     return browserify({entries: path.ENTRY_POINT, transform:[babelify], extensions: ['.jsx'], debug: true,

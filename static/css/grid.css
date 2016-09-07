@@ -12,3 +12,9 @@ html {
     clear: both;
     content: "";
     display: block; }
+  .daw-container .daw-row {
+    display: block; }
+    .daw-container .daw-row::after {
+      clear: both;
+      content: "";
+      display: block; }

@@ -16,7 +16,6 @@ export default class AsciiItem extends Component {
 		const todaysDate = new Date();
 		let itemDate = new Date(date);
 		let dateDif = Math.round(Math.abs((itemDate.getTime() - todaysDate.getTime())/(oneDay)));
-		console.log(dateDif)
 		return dateDif < 6 ? ('Added ' + dateDif + ' days ago') : ('Added ' + itemDate.toDateString());
 	}
 
@@ -27,6 +26,7 @@ export default class AsciiItem extends Component {
 				<p>Font Size: {this.props.item.size}</p>
 				<p>Price: {'$' + (this.props.item.price/100).toFixed(2)}</p>
 				<p> {this.renderDate(this.props.item.date)}</p>
+				<button>Add to cart</button>
 			</div>
 		)
 	}

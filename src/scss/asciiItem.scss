@@ -3,9 +3,10 @@
 	'theme';
 
 .daw-asciiItem{
-	@include span-columns(1);
+	@include span-columns(2);
 	border: thin solid $grey;
 	padding: 15px;
+
 	.daw-face{
 		margin:0px auto;
 		display:inline-block;

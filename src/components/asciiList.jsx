@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import handleApi from '../../lib/http-handle-api';
 import AsciiItem from './asciiItem';
+import Ad from './ad';
 
 export default class AsciiList extends Component {
 
@@ -12,6 +13,7 @@ export default class AsciiList extends Component {
 		this.renderItems = this.renderItems.bind(this)
 	}
 	componentWillMount() {
+		let skip = 0;
 		const API = {url: 'http://localhost:8000/api/?'}
 		const ascii = this;
 		let items = [];
@@ -25,10 +27,18 @@ export default class AsciiList extends Component {
 			})
 	}
 	renderItems(){
-		return (this.state.asciiItems.map((item) => <AsciiItem item={item} key={'item-' + item.id} > </AsciiItem>) )
+		return (this.state.asciiItems.map(
+					(item, i) => <AsciiItem item={item} key={'item-' + item.id} > </AsciiItem>
+				))
 	}
 
 	render(){
-		return (<div>{this.state.asciiItems !== null ? this.renderItems() : <img src='http://www.owlhatworld.com/wp-content/uploads/2015/12/50.gif'/>}</div>);
+		return (
+			<div className='incrementalLoad'>
+				<Ad></Ad>
+				{this.state.asciiItems !== null ? this.renderItems() : <img src='http://www.owlhatworld.com/wp-content/uploads/2015/12/50.gif'/>}
+			</div>
+
+		);
 	}
 }

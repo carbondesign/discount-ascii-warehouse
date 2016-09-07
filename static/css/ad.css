@@ -1,0 +1,24 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+.daw-ad {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 40.29137%;
+  margin-left: 21.32451%;
+  border: thin solid #ccc; }
+  .daw-ad:last-child {
+    margin-right: 0; }
+  .daw-ad .ad-image {
+    overflow: hidden;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 18.96686%;
+    height: 300px; }
+    .daw-ad .ad-image:last-child {
+      margin-right: 0; }

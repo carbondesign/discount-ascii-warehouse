@@ -12,6 +12,12 @@ html {
     clear: both;
     content: "";
     display: block; }
+  .daw-container .daw-row {
+    display: block; }
+    .daw-container .daw-row::after {
+      clear: both;
+      content: "";
+      display: block; }
 
 html {
   box-sizing: border-box; }
@@ -22,8 +28,8 @@ html {
 .daw-asciiItem {
   float: left;
   display: block;
-  margin-right: 2.5641%;
-  width: 7.69231%;
+  margin-right: 2.84259%;
+  width: 17.72593%;
   border: thin solid #ccc;
   padding: 15px; }
   .daw-asciiItem:last-child {
@@ -32,6 +38,31 @@ html {
     margin: 0px auto;
     display: inline-block;
     white-space: nowrap; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+.daw-ad {
+  float: left;
+  display: block;
+  margin-right: 2.84259%;
+  width: 48.57871%;
+  margin-left: 25.71065%;
+  border: thin solid #ccc; }
+  .daw-ad:last-child {
+    margin-right: 0; }
+  .daw-ad .ad-image {
+    overflow: hidden;
+    float: left;
+    display: block;
+    margin-right: 2.84259%;
+    width: 22.86806%;
+    height: 300px; }
+    .daw-ad .ad-image:last-child {
+      margin-right: 0; }
 
 @font-face {
   font-family: 'heebolight';

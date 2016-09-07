@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom';
 import AsciiList from './components/asciiList';
 
 ReactDOM.render(
-	<AsciiList />, document.getElementById('asciiApp')
+	<section>
+		<p>But first, a word from our sponsors:</p>
+		<AsciiList />
+	</section>
+	, document.getElementById('asciiApp')
 )
 
 
