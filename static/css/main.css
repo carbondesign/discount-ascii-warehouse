@@ -13,6 +13,25 @@ html {
     content: "";
     display: block; }
 
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+.daw-asciiItem {
+  float: left;
+  display: block;
+  margin-right: 2.5641%;
+  width: 7.69231%;
+  border: thin solid #ccc;
+  padding: 15px; }
+  .daw-asciiItem:last-child {
+    margin-right: 0; }
+  .daw-asciiItem .daw-face {
+    margin: 0px auto;
+    display: inline-block; }
+
 @font-face {
   font-family: 'heebolight';
   src: url("../fonts/Heebo/heebo-light-webfont.woff2") format("woff2"), url("../fonts/Heebo/heebo-light-webfont.woff") format("woff"), url("../fonts/Heebo/Heebo-Light.ttf") format("truetype");

@@ -8,11 +8,11 @@ Please read the instructions and FAQ below before beginning.
 Features
 ----
 
-- products are displayed in a grid.
+X products are displayed in a grid.
 - give the user an option to sort the products in ascending order. Can sort by "size", "price" or "id".
 - each product has :
-  - a "size" field, which is the font-size (in pixels). We should display the faces in their correct size, to give customers a realistic impression of what they're buying.
-  - a "price" field, in cents. This should be formatted as dollars like `$3.51`.
+  X a "size" field, which is the font-size (in pixels). We should display the faces in their correct size, to give customers a realistic impression of what they're buying.
+  X a "price" field, in cents. This should be formatted as dollars like `$3.51`.
   - a "date" field, which is the date the product was added to the catalog. Dates should be displayed in relative time (eg. "3 days ago") unless they are older than 1 week, in which case the full date should be displayed.
 - the product grid should automatically load more items as you scroll down.
 - our product database is under high load due to growing demand for ascii, so please display an animated "loading..." message while the user waits.

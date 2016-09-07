@@ -1,0 +1,18 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+.daw-asciiItem {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 6.17215%;
+  border: thin solid #ccc;
+  padding: 15px; }
+  .daw-asciiItem:last-child {
+    margin-right: 0; }
+  .daw-asciiItem .daw-face {
+    margin: 0px auto;
+    display: inline-block; }

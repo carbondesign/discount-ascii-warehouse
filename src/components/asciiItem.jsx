@@ -13,7 +13,12 @@ export default class AsciiItem extends Component {
 	}
 	render(){
 		return (
-			<div>{this.props.item.face}</div>
+			<div className='daw-asciiItem p_All-3x'>
+				<span className='daw-face' style={{fontSize: + this.props.item.size + 'px'}}>{this.props.item.face}</span>
+				<p>Font Size: {this.props.item.size}</p>
+				<p>Price: {'$' + (this.props.item.price/100).toFixed(2)}</p>
+			</div>
 		)
 	}
 }
+
