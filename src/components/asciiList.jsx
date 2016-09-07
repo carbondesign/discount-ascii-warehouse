@@ -29,6 +29,6 @@ export default class AsciiList extends Component {
 	}
 
 	render(){
-		return (<div>{this.state.asciiItems !== null ? this.renderItems() : <p>{'loading'}</p>}</div>);
+		return (<div>{this.state.asciiItems !== null ? this.renderItems() : <img src='http://www.owlhatworld.com/wp-content/uploads/2015/12/50.gif'/>}</div>);
 	}
 }

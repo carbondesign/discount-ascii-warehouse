@@ -30,7 +30,8 @@ html {
     margin-right: 0; }
   .daw-asciiItem .daw-face {
     margin: 0px auto;
-    display: inline-block; }
+    display: inline-block;
+    white-space: nowrap; }
 
 @font-face {
   font-family: 'heebolight';
