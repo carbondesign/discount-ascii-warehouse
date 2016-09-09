@@ -11,7 +11,6 @@ var gulp    = require('gulp'),
     buffer      = require('vinyl-buffer'),
     source      = require('vinyl-source-stream'),
     livereload  = require('gulp-livereload'),
-    neat 		= require('node-neat').includePaths,
     del         = require('del'),
     runSequence = require('run-sequence');
 
@@ -53,7 +52,7 @@ gulp.task('build', function(callback) {
 gulp.task('scss', function() {
    gulp.src(path.SCSS_DIR)
     .pipe(sass({
-            includePaths: require('bourbon-neat').includePaths
+            includePaths: [require('bourbon-neat').includePaths,require('node-bourbon').includePaths]
         }))
     .pipe(gulp.dest(path.BUILD_DIR + '/css'))
     .pipe(livereload());

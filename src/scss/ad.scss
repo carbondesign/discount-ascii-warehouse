@@ -1,5 +1,4 @@
-@import 'neat';
-@import 'theme';
+@import 'neat','theme';
 
 .daw-ad{
 	@include span-columns(5);
