@@ -8,35 +8,40 @@ export default class AsciiList extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			asciiItems: null
+			asciiItems: [],
+			isLoading:true,
+			loadNext: this.props.loadNext
 		};
-		this.renderItems = this.renderItems.bind(this)
+		this.renderItem = this.renderItem.bind(this);
 	}
 	componentWillMount() {
-		let skip = 0;
-		const API = {url: 'http://localhost:8000/api/?'}
+		this.fetchAscii()
+	}
+	fetchAscii(){
+		const API = {url: ('http://localhost:8000/api/?skip=' + this.props.offset)}
 		const ascii = this;
-		let items = [];
+		let items = this.state.asciiItems;
 		fetch(API.url)
 			.then(function(response) {
 				response.writeHead = (statusCode, contentType) => response;
 				handleApi(API, response);
 				response.write = (result) => items.push(JSON.parse(result))
-				response.end = () => ascii.setState({asciiItems : items});
+				response.end = () => ascii.setState({ asciiItems : items, isLoading : false });
 			  return response.blob();
-			})
+			});
 	}
-	renderItems(){
+
+	renderItem(){
 		return (this.state.asciiItems.map(
-					(item, i) => <AsciiItem item={item} key={'item-' + item.id} > </AsciiItem>
-				))
+			(item, i) => <AsciiItem item={item} key={'item-' + item.id} className={(i==4)?'m_R-0': ''}> </AsciiItem>
+		))
 	}
 
 	render(){
 		return (
-			<div className='incrementalLoad'>
+			<div className={'increment ' + this.props.className}>
 				<Ad></Ad>
-				{this.state.asciiItems !== null ? this.renderItems() : <img src='http://www.owlhatworld.com/wp-content/uploads/2015/12/50.gif'/>}
+				{ this.state.isLoading ? <img src='http://www.owlhatworld.com/wp-content/uploads/2015/12/50.gif'/> : this.renderItem() }
 			</div>
 
 		);

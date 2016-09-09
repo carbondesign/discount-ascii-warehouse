@@ -4,13 +4,40 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+.hide {
+  display: none; }
+
+.animated {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn; }
+
 .daw-asciiItem {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 14.70196%;
   border: thin solid #ccc;
-  padding: 15px; }
+  padding: 15px;
+  overflow: hidden;
+  height: 300px; }
   .daw-asciiItem:last-child {
     margin-right: 0; }
   .daw-asciiItem .daw-face {

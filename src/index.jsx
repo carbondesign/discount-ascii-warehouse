@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AsciiList from './components/asciiList';
+import AsciiIncrement from './components/asciiIncrement';
 
 ReactDOM.render(
 	<section>
 		<p>But first, a word from our sponsors:</p>
-		<AsciiList />
+		<AsciiIncrement />
 	</section>
 	, document.getElementById('asciiApp')
 )

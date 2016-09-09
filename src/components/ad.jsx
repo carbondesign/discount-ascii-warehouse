@@ -17,7 +17,7 @@ export default class Ad extends Component {
 	}
 	render(){
 		return (
-			<div className='daw-row'>
+			<div className='daw-row fadeIn animated'>
 				<div className='daw-ad'>{this.renderImage()}</div>
 			</div>
 		)

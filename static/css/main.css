@@ -1,3 +1,28 @@
+.hide {
+  display: none; }
+
+.animated {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn; }
+
 html {
   box-sizing: border-box; }
 
@@ -25,13 +50,40 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+.hide {
+  display: none; }
+
+.animated {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn; }
+
 .daw-asciiItem {
   float: left;
   display: block;
   margin-right: 2.84259%;
   width: 17.72593%;
   border: thin solid #ccc;
-  padding: 15px; }
+  padding: 15px;
+  overflow: hidden;
+  height: 300px; }
   .daw-asciiItem:last-child {
     margin-right: 0; }
   .daw-asciiItem .daw-face {
@@ -44,6 +96,31 @@ html {
 
 *, *::after, *::before {
   box-sizing: inherit; }
+
+.hide {
+  display: none; }
+
+.animated {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn; }
 
 .daw-ad {
   float: left;
@@ -63,6 +140,9 @@ html {
     height: 300px; }
     .daw-ad .ad-image:last-child {
       margin-right: 0; }
+
+.m_R-0 {
+  margin-right: 0px !important; }
 
 @font-face {
   font-family: 'heebolight';

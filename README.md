@@ -10,11 +10,11 @@ Features
 
 X products are displayed in a grid.
 - give the user an option to sort the products in ascending order. Can sort by "size", "price" or "id".
-- each product has :
+X each product has :
   X a "size" field, which is the font-size (in pixels). We should display the faces in their correct size, to give customers a realistic impression of what they're buying.
   X a "price" field, in cents. This should be formatted as dollars like `$3.51`.
   X a "date" field, which is the date the product was added to the catalog. Dates should be displayed in relative time (eg. "3 days ago") unless they are older than 1 week, in which case the full date should be displayed.
-- the product grid should automatically load more items as you scroll down.
+X the product grid should automatically load more items as you scroll down.
 X our product database is under high load due to growing demand for ascii, so please display an animated "loading..." message while the user waits.
 - to improve the user's experience, we should always pre-emptively fetch the next batch of results in advance, making use of idle-time.  But they still should not be displayed until the user has scrolled to the bottom of the product grid.
 - when the user reaches the end and there are no more products to display, show the message "~ end of catalogue ~".

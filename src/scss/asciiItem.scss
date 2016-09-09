@@ -6,7 +6,8 @@
 	@include span-columns(2);
 	border: thin solid $grey;
 	padding: 15px;
-
+	overflow: hidden;
+	height: 300px;
 	.daw-face{
 		margin:0px auto;
 		display:inline-block;
