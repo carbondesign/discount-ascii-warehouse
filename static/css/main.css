@@ -97,6 +97,21 @@ html {
     display: inline-block;
     white-space: nowrap; }
 
+.loadingGIF {
+  overflow: hidden;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  margin: 10px auto; }
+  .loadingGIF:before,
+  .loadingGIF :after {
+    content: "\f111";
+    position: absolute;
+    font: normal normal normal 14px/1 'FontAwesome'; }
+  .loadingGIF img {
+    height: 100%;
+    margin-left: -10%; }
+
 html {
   box-sizing: border-box; }
 
@@ -145,13 +160,48 @@ html {
     float: left;
     display: block;
     margin-right: 2.84259%;
-    width: 22.86806%;
-    height: 300px; }
+    width: 38.29445%;
+    height: 200px; }
     .daw-ad .ad-image:last-child {
       margin-right: 0; }
+    .daw-ad .ad-image img {
+      height: 100%;
+      min-width: 100%;
+      margin-left: -20%; }
+
+.hide {
+  display: none; }
+
+.animated {
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  animation-name: fadeIn; }
 
 .m_R-0 {
   margin-right: 0px !important; }
+
+.p_B-2x {
+  padding-bottom: 20px; }
 
 @font-face {
   font-family: 'heebolight';

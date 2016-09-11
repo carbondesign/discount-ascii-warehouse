@@ -14,3 +14,21 @@
 		white-space: nowrap;
 	}
 }
+.loadingGIF{
+	overflow: hidden;
+	height: 100px;
+	width: 100px;
+	border-radius: 100%;
+	margin: 10px auto;
+	&:before,
+	:after{
+		content: "\f111";
+		position: absolute;
+		font: normal normal normal 14px/1 'FontAwesome';
+	}
+	img{
+		height:100%;
+		margin-left: -10%;
+	}
+
+}
