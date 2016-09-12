@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Averia+Sans+Libre|Geostar+Fill|Share+Tech+Mono|VT323|Wallpoet';
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
 .hide {
   display: none; }
 
@@ -29,6 +29,12 @@
 
 .width100 {
   width: 100%; }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
 
 .daw-button {
   background-color: #eed93e;
@@ -97,6 +103,12 @@ html {
 
 .width100 {
   width: 100%; }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
 
 .daw-button {
   background-color: #eed93e;
@@ -183,6 +195,12 @@ html {
 .width100 {
   width: 100%; }
 
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
 .daw-button {
   background-color: #eed93e;
   color: #333;
@@ -197,7 +215,7 @@ html {
   float: left;
   display: block;
   margin-right: 3.57866%;
-  width: 125.89467%; }
+  width: 100%; }
   .daw-ad-row:last-child {
     margin-right: 0; }
   .daw-ad-row .daw-ad {
@@ -205,7 +223,7 @@ html {
     display: block;
     margin-right: 3.57866%;
     width: 48.21067%;
-    margin-left: 16.18417%;
+    margin-left: 25.89467%;
     border: thin solid #ccc;
     background-color: white;
     padding-right: 20px; }
@@ -224,6 +242,30 @@ html {
         height: 100%;
         min-width: 100%;
         margin-left: -20%; }
+    .daw-ad-row .daw-ad .ad-text {
+      float: left;
+      display: block;
+      margin-right: 3.57866%;
+      width: 61.158%;
+      position: relative; }
+      .daw-ad-row .daw-ad .ad-text:last-child {
+        margin-right: 0; }
+      .daw-ad-row .daw-ad .ad-text .ad-logo {
+        position: absolute;
+        width: 120px;
+        right: 0px;
+        top: 20px; }
+
+.daw-ad-intro {
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 48.21067%;
+  margin-left: 25.89467%;
+  margin-top: 0px;
+  margin-bottom: 0px; }
+  .daw-ad-intro:last-child {
+    margin-right: 0; }
 
 .hide {
   display: none; }
@@ -255,6 +297,12 @@ html {
 
 .width100 {
   width: 100%; }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
 
 .daw-button {
   background-color: #eed93e;
@@ -336,5 +384,7 @@ body {
     width: 100%;
     left: 0;
     bottom: 0px; }
+  body label {
+    font-size: 1rem; }
   body #asciiApp {
     background-color: rgba(255, 255, 255, 0.92); }

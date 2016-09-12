@@ -34,8 +34,20 @@ export default class Nav extends Component {
 		return (
 			<nav className={this.state.sticky ? 'sticky' : null}>
 				<div className="daw-container">
-					<img src="./images/moss.gif" alt=""/>
-					{'Discount Ascii Warehouse'}
+					<div className='pull-left'>
+						<img src="./images/moss.gif" alt=""/>
+						{'Discount Ascii Warehouse'}
+					</div>
+
+					<div className='pull-right'>
+						<label>Sort by: </label>
+						<select>
+							<option>{'Size'}</option>
+							<option>{'Price'}</option>
+							<option>{'Id'}</option>
+						</select>
+					</div>
+
 				</div>
 			</nav>
 		)

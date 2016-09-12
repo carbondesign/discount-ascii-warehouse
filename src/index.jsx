@@ -7,7 +7,7 @@ import Nav from './components/nav';
 ReactDOM.render(
 	<section>
 		<div className='daw-container'>
-			<p>But first, a word from our sponsors:</p>
+			<p className='daw-ad-intro'>But first, a word from our sponsors:</p>
 			<Ad />
 		</div>
 

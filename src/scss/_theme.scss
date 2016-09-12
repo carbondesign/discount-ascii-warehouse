@@ -40,6 +40,12 @@ $color-yellow: #eed93e;
 .width100{
 	width: 100%;
 }
+.pull-left{
+	float: left
+}
+.pull-right{
+	float: right
+}
 .daw-button{
 	background-color: $color-yellow;
     color: #333;

@@ -35,6 +35,12 @@ html {
 .width100 {
   width: 100%; }
 
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
 .daw-button {
   background-color: #eed93e;
   color: #333;
@@ -49,7 +55,7 @@ html {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 82.94039%; }
+  width: 65.88078%; }
   .daw-ad-row:last-child {
     margin-right: 0; }
   .daw-ad-row .daw-ad {
@@ -57,7 +63,7 @@ html {
     display: block;
     margin-right: 2.35765%;
     width: 31.76157%;
-    margin-left: 10.66226%;
+    margin-left: 17.05961%;
     border: thin solid #ccc;
     background-color: white;
     padding-right: 20px; }
@@ -76,3 +82,27 @@ html {
         height: 100%;
         min-width: 100%;
         margin-left: -20%; }
+    .daw-ad-row .daw-ad .ad-text {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 40.29137%;
+      position: relative; }
+      .daw-ad-row .daw-ad .ad-text:last-child {
+        margin-right: 0; }
+      .daw-ad-row .daw-ad .ad-text .ad-logo {
+        position: absolute;
+        width: 120px;
+        right: 0px;
+        top: 20px; }
+
+.daw-ad-intro {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  margin-left: 17.05961%;
+  margin-top: 0px;
+  margin-bottom: 0px; }
+  .daw-ad-intro:last-child {
+    margin-right: 0; }

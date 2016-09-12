@@ -5,7 +5,7 @@
 	'ad',
 	'margins_and_padding';
 
-@import 'https://fonts.googleapis.com/css?family=Averia+Sans+Libre|Geostar+Fill|Share+Tech+Mono|VT323|Wallpoet';
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
 @font-face {
     font-family: 'heebolight';
     src: url('../fonts/Heebo/heebo-light-webfont.woff2') format('woff2'), url('../fonts/Heebo/heebo-light-webfont.woff') format('woff'), url('../fonts/Heebo/Heebo-Light.ttf') format('truetype');
@@ -63,6 +63,10 @@ body {
     	width: 100%;
     	left: 0;
     	bottom: 0px;
+    }
+    label{
+    	font-size: 1rem;
+    	// font-family: 'heebolight'
     }
     #asciiApp{
     	background-color: rgba(255,255,255,0.92);
