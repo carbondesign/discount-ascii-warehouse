@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import handleApi from '../../lib/http-handle-api';
 import AsciiItem from './asciiItem';
 import Ad from './ad';
+import * as Utils from '../utils/'
 
 export default class AsciiList extends Component {
 
@@ -10,9 +11,9 @@ export default class AsciiList extends Component {
 		this.state = {
 			asciiElements: [],
 			isLoading:true,
-			setIncrement: 0
+			sortBy: 'id',
+    		sortDir: null
 		};
-		// this.renderItems = this.renderItems.bind(this);
 		this.handleScroll = this.handleScroll.bind(this);
 		this.fetchAscii = this.fetchAscii.bind(this);
 	}
@@ -20,48 +21,47 @@ export default class AsciiList extends Component {
 	fetchAscii(offset){
 
 		this.setState({isLoading : true })
-		const API = {url: ('http://localhost:8000/api?skip=' + offset)}
+		const API = {url: ('http://localhost:8000/api?limit=20&skip=' + offset)}
 		const ascii = this;
-		// i = this.state.setIncrement,
 		self = this;
 		fetch(API.url)
-			.then(function(response) {
 
-				let newJSON = [];
-				response.writeHead = (statusCode, contentType) => {return response;}
-				handleApi(API, response);
+			.then(Utils.status)
+			.then(function (json) {
+				if (json.err) {
+					console.log('Error ' + json.err);
+				} else {
+					let newJSON = [];
+					json.writeHead = (statusCode, contentType) => {return json;}
+					handleApi(API, json);
 
-				response.write = (result) => { newJSON.push(JSON.parse(result))}
-				response.end = () => {
+					json.write = (result) => { newJSON.push(Utils.json(result))}
+					json.end = () => {
 
-					let newSet = self.buildElements(newJSON);
-					console.log('fetching',self.state.asciiElements,newSet);
-					let newItems = self.state.asciiElements.push(newSet)
-					ascii.setState({
-						asciiItems : newItems,
-						isLoading : false
-					});
-					// self.setState({setIncrement : (i + 1)});
-					window.addEventListener('scroll', self.handleScroll);
-				};
-			  return response;
+						let newSet = self.buildElements(newJSON);
+						console.log('fetching',self.state.asciiElements,newSet);
+						let newItems = self.state.asciiElements.push(newSet)
+						ascii.setState({
+							asciiItems : newItems,
+							isLoading : false
+						});
+						window.addEventListener('scroll', self.handleScroll);
+					};
+					console.log(json);
+				  return json;
+
+				}
+			})
+			.catch(function (error) {
+				console.log('Error fetching data: ' + error);
 			});
 	}
 
-	// buildSet(start, end){
-	// 	return (
-	// 		<div className={'increment ' + this.props.className}>
-	// 			<Ad key={'ad-' + this.state.setIncrement}></Ad>
-	// 			{ this.state.isLoading ? this.loadingImage() : null}
-	// 			{ this.renderItems() }
-	// 		</div>
-	// 	)
-	// }
 	loadingImage(i){
 		if (this.state.isLoading) {
 			return (<div className='daw-row'>
-				<div className='loadingGIF'>
-					<img key={'catad-' + i}  src='http://www.owlhatworld.com/wp-content/uploads/2015/12/50.gif'/>
+				<div className='loadingGIF fadeIn animated'>
+					<img key={'catad-' }  src='http://www.owlhatworld.com/wp-content/uploads/2015/12/50.gif'/>
 				</div>
 			</div>)
 		}
@@ -69,18 +69,19 @@ export default class AsciiList extends Component {
 	buildElements(items){
 		var asciiElements = [];
 		for (var i = 0; i < items.length; i++) {
-			asciiElements.push(<AsciiItem item={items[i]} key={'item-' + items[i].id} > </AsciiItem>)
+			asciiElements.push(<AsciiItem item={items[i]} key={'item-' + items[i].id} className={ Number.isInteger((i + 1)/4) ? 'm_R-0':''}> </AsciiItem>)
 		}
+		asciiElements.push(<Ad></Ad>)
 		return asciiElements;
 	}
 	componentWillMount() {
-	 	this.fetchAscii(1)
+	 	this.fetchAscii(0)
 	}
 	componentDidMount() {
 		window.addEventListener('scroll', this.handleScroll);
 	}
 	componentWillUnmount() {
-	     window.removeEventListener('scroll', this.handleScroll);
+	    window.removeEventListener('scroll', this.handleScroll);
 	}
 
 	handleScroll(e){
@@ -94,12 +95,11 @@ export default class AsciiList extends Component {
 	render(){
 		console.log(this.state.asciiElements)
 		return (
-			<div className='p_B-2x'>
+			<div className='p_B-4x'>
 				<div className='daw-row'>
 					{this.state.asciiElements}
 				</div>
-
-				{this.loadingImage(1)}
+				{this.loadingImage()}
 			</div>
 
 

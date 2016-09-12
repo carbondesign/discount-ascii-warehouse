@@ -24,7 +24,7 @@ var path = {
     JSX_DIR: './src/**/*.jsx',
     SCSS_DIR: './src/scss/**/*.scss',
     FONTS_DIR: ['./src/fonts/**/*.*'],
-    IMG_DIR: './src/img/**/*.*',
+    IMG_DIR: './src/images/**/*.*',
     // JS_DIR: 'static/js/**/*.js',
     // FAVICON_DIR: './src/img/favicons/favicon.ico',
     SITE_ROOT_DIR: './src/**/*.html'
@@ -78,7 +78,7 @@ gulp.task('fonts', function() {
 // Copy img
 gulp.task('img', function() {
     return gulp.src(path.IMG_DIR)
-        .pipe(gulp.dest(path.BUILD_DIR + '/img'));
+        .pipe(gulp.dest(path.BUILD_DIR + '/images'));
 });
 
 //serve

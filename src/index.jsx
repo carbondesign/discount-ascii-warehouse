@@ -1,13 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AsciiView from './components/asciiView';
+import AsciiList from './components/asciiList';
+import Ad from './components/ad';
+import Nav from './components/nav';
 
 ReactDOM.render(
 	<section>
-		<p>But first, a word from our sponsors:</p>
-		<AsciiView />
+		<div className='daw-container'>
+			<p>But first, a word from our sponsors:</p>
+			<Ad />
+		</div>
+
+		<AsciiList  className =' fadeIn animated '> </AsciiList>
 	</section>
 	, document.getElementById('asciiApp')
 )
+ReactDOM.render(
+	<Nav/>
 
+	, document.getElementById('daw-nav')
+)
 

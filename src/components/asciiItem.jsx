@@ -10,6 +10,9 @@ export default class AsciiItem extends Component {
 	componentWillMount() {
 
 	}
+	addItem(){
+		console.log('click')
+	}
 	renderDate(date){
 		const oneDay = 24*60*60*1000;
 		const todaysDate = new Date();
@@ -20,12 +23,12 @@ export default class AsciiItem extends Component {
 
 	render(){
 		return (
-			<div className={'daw-asciiItem p_All-3x ' + this.props.className }>
+			<div className={'daw-asciiItem p_All-3x m_V-2x ' + this.props.className } >
 				<span className='daw-face' style={{fontSize: + this.props.item.size + 'px'}}>{this.props.item.face}</span>
-				<p>Font Size: {this.props.item.size}</p>
-				<p>Price: {'$' + (this.props.item.price/100).toFixed(2)}</p>
-				<p> {this.renderDate(this.props.item.date)}</p>
-				<button>Add to cart</button>
+				<p className='m_V-0'>Font Size: {this.props.item.size}</p>
+				<p className='m_V-0'>Price: {'$' + (this.props.item.price/100).toFixed(2)}</p>
+				<p className='m_V-0'> {this.renderDate(this.props.item.date)}</p>
+				<button className='daw-button' onClick={this.addItem}>Add to cart</button>
 			</div>
 		)
 	}

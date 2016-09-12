@@ -1,3 +1,4 @@
+@import 'https://fonts.googleapis.com/css?family=Averia+Sans+Libre|Geostar+Fill|Share+Tech+Mono|VT323|Wallpoet';
 .hide {
   display: none; }
 
@@ -25,6 +26,19 @@
   -webkit-animation-name: fadeIn;
   -moz-animation-name: fadeIn;
   animation-name: fadeIn; }
+
+.width100 {
+  width: 100%; }
+
+.daw-button {
+  background-color: #eed93e;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  margin-top: 15px; }
 
 html {
   box-sizing: border-box; }
@@ -81,27 +95,47 @@ html {
   -moz-animation-name: fadeIn;
   animation-name: fadeIn; }
 
+.width100 {
+  width: 100%; }
+
+.daw-button {
+  background-color: #eed93e;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  margin-top: 15px; }
+
 .daw-asciiItem {
   float: left;
   display: block;
-  margin-right: 2.84259%;
-  width: 17.72593%;
+  margin-right: 3.57866%;
+  width: 22.316%;
   border: thin solid #ccc;
   padding: 15px;
   overflow: hidden;
-  height: 300px; }
+  height: 275px;
+  background-color: white; }
   .daw-asciiItem:last-child {
     margin-right: 0; }
   .daw-asciiItem .daw-face {
-    margin: 0px auto;
-    display: inline-block;
-    white-space: nowrap; }
+    display: block;
+    white-space: nowrap;
+    line-height: 100px;
+    background-color: #e1f5f7;
+    color: #666;
+    text-align: center;
+    margin: -20px -20px 10px;
+    padding: 20px; }
+  .daw-asciiItem p {
+    font-size: 0.9em; }
 
 .loadingGIF {
   overflow: hidden;
   height: 100px;
   width: 100px;
-  border-radius: 100%;
   margin: 10px auto; }
   .loadingGIF:before,
   .loadingGIF :after {
@@ -146,28 +180,50 @@ html {
   -moz-animation-name: fadeIn;
   animation-name: fadeIn; }
 
-.daw-ad {
+.width100 {
+  width: 100%; }
+
+.daw-button {
+  background-color: #eed93e;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  margin-top: 15px; }
+
+.daw-ad-row {
   float: left;
   display: block;
-  margin-right: 2.84259%;
-  width: 48.57871%;
-  margin-left: 25.71065%;
-  border: thin solid #ccc; }
-  .daw-ad:last-child {
+  margin-right: 3.57866%;
+  width: 125.89467%; }
+  .daw-ad-row:last-child {
     margin-right: 0; }
-  .daw-ad .ad-image {
-    overflow: hidden;
+  .daw-ad-row .daw-ad {
     float: left;
     display: block;
-    margin-right: 2.84259%;
-    width: 38.29445%;
-    height: 200px; }
-    .daw-ad .ad-image:last-child {
+    margin-right: 3.57866%;
+    width: 48.21067%;
+    margin-left: 16.18417%;
+    border: thin solid #ccc;
+    background-color: white;
+    padding-right: 20px; }
+    .daw-ad-row .daw-ad:last-child {
       margin-right: 0; }
-    .daw-ad .ad-image img {
-      height: 100%;
-      min-width: 100%;
-      margin-left: -20%; }
+    .daw-ad-row .daw-ad .ad-image {
+      overflow: hidden;
+      float: left;
+      display: block;
+      margin-right: 3.57866%;
+      width: 35.26333%;
+      height: 200px; }
+      .daw-ad-row .daw-ad .ad-image:last-child {
+        margin-right: 0; }
+      .daw-ad-row .daw-ad .ad-image img {
+        height: 100%;
+        min-width: 100%;
+        margin-left: -20%; }
 
 .hide {
   display: none; }
@@ -197,8 +253,38 @@ html {
   -moz-animation-name: fadeIn;
   animation-name: fadeIn; }
 
+.width100 {
+  width: 100%; }
+
+.daw-button {
+  background-color: #eed93e;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  margin-top: 15px; }
+
+.m_T-0 {
+  margin-top: 0px !important; }
+
 .m_R-0 {
   margin-right: 0px !important; }
+
+.m_V-0 {
+  margin-bottom: 0;
+  margin-top: 0; }
+
+.m_V-2x {
+  margin-bottom: 20px;
+  margin-top: 20px; }
+
+.p_All-2x {
+  padding: 20px; }
+
+.p_B-4x {
+  padding-bottom: 40px; }
 
 .p_B-2x {
   padding-bottom: 20px; }
@@ -210,4 +296,45 @@ html {
   font-style: normal; }
 
 body {
+  background-image: url(http://colourlovers.com.s3.amazonaws.com/images/patterns/3/3519.png?1197407690);
+  background-color: #fef492;
   font-family: 'heebolight', sans-serif; }
+  body nav {
+    font-family: 'Share Tech Mono';
+    color: white;
+    padding: 10px 0;
+    background-color: #0f7303;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 3em;
+    height: 70px;
+    width: 100%;
+    z-index: 5;
+    box-shadow: 2px 0 4px #000; }
+    body nav img {
+      height: 50px;
+      margin-top: 10px; }
+    body nav.sticky {
+      position: fixed;
+      top: -10px; }
+  body header {
+    background-color: white;
+    padding: 60px;
+    margin-top: 90px; }
+    body header h1 {
+      font-family: 'Share Tech Mono';
+      margin-top: 0px;
+      color: #1c0080; }
+    body header p {
+      font-size: 1.5em;
+      line-height: 1.5em; }
+  body footer {
+    background-color: #eed93e;
+    height: 40px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0px; }
+  body #asciiApp {
+    background-color: rgba(255, 255, 255, 0.92); }

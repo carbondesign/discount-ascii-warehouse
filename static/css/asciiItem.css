@@ -32,6 +32,19 @@ html {
   -moz-animation-name: fadeIn;
   animation-name: fadeIn; }
 
+.width100 {
+  width: 100%; }
+
+.daw-button {
+  background-color: #eed93e;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  margin-top: 15px; }
+
 .daw-asciiItem {
   float: left;
   display: block;
@@ -40,19 +53,26 @@ html {
   border: thin solid #ccc;
   padding: 15px;
   overflow: hidden;
-  height: 300px; }
+  height: 275px;
+  background-color: white; }
   .daw-asciiItem:last-child {
     margin-right: 0; }
   .daw-asciiItem .daw-face {
-    margin: 0px auto;
-    display: inline-block;
-    white-space: nowrap; }
+    display: block;
+    white-space: nowrap;
+    line-height: 100px;
+    background-color: #e1f5f7;
+    color: #666;
+    text-align: center;
+    margin: -20px -20px 10px;
+    padding: 20px; }
+  .daw-asciiItem p {
+    font-size: 0.9em; }
 
 .loadingGIF {
   overflow: hidden;
   height: 100px;
   width: 100px;
-  border-radius: 100%;
   margin: 10px auto; }
   .loadingGIF:before,
   .loadingGIF :after {

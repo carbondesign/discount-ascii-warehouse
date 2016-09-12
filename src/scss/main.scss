@@ -4,6 +4,8 @@
 	'asciiItem',
 	'ad',
 	'margins_and_padding';
+
+@import 'https://fonts.googleapis.com/css?family=Averia+Sans+Libre|Geostar+Fill|Share+Tech+Mono|VT323|Wallpoet';
 @font-face {
     font-family: 'heebolight';
     src: url('../fonts/Heebo/heebo-light-webfont.woff2') format('woff2'), url('../fonts/Heebo/heebo-light-webfont.woff') format('woff'), url('../fonts/Heebo/Heebo-Light.ttf') format('truetype');
@@ -12,6 +14,58 @@
 }
 
 body {
-	// color:green;
+	background-image: url(http://colourlovers.com.s3.amazonaws.com/images/patterns/3/3519.png?1197407690);
+	background-color: #fef492;
     font-family: 'heebolight', sans-serif;
+
+    nav{
+    	font-family: 'Share Tech Mono';
+    	color:white;
+		padding: $spacingunit 0;
+		background-color: $color-green;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		font-size: 3em;
+		height: 70px;
+		width: 100%;
+		z-index: 5;
+		box-shadow: 2px 0 4px #000;
+		img{
+			height: 50px;
+			margin-top: $spacingunit;
+		}
+		&.sticky{
+			position: fixed;
+			top: -$spacingunit;
+		}
+
+    }
+    header{
+    	background-color: white;
+    	padding: $spacingunit * 6;
+    	margin-top: $spacingunit *9;
+    	h1{
+    		font-family: 'Share Tech Mono';
+    		margin-top: 0px;
+    		color: $color-purple;
+    	}
+    	p{
+    		font-size: 1.5em;
+    		line-height: 1.5em;
+
+    	}
+    }
+    footer{
+    	background-color: $color-yellow;
+    	height: 40px;
+    	position: absolute;
+    	width: 100%;
+    	left: 0;
+    	bottom: 0px;
+    }
+    #asciiApp{
+    	background-color: rgba(255,255,255,0.92);
+    }
+
 }

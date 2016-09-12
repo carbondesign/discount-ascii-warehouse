@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import * as Utils from '../utils/'
 
 export default class Ad extends Component {
 
@@ -9,12 +10,23 @@ export default class Ad extends Component {
 		};
 	}
 	componentWillMount() {
-		// fetch('http://catfacts-api.appspot.com/api/facts', {mode: 'no-cors'})
-		// 	.then(function(response) {
-		// 		console.log(response)
-		// 		this.setState({adText: response.facts})
+		fetch('http://www.randomtext.me/api/lorem/p-5/5-15')
+			.then(Utils.status)
+			.then(function (json) {
+				// console.log(json);
+				if (json.err) {
+					console.log('Error ' + json.err);
+				} else {
+					console.log(json);
 
-		// 	});
+				  return json;
+
+				}
+			})
+			.catch(function (error) {
+				console.log('Error fetching data: ' + error);
+			});
+
 
 	}
 	renderImage(){
@@ -26,7 +38,7 @@ export default class Ad extends Component {
 	}
 	render(){
 		return (
-			<div className='daw-row fadeIn animated'>
+			<div className='daw-ad-row fadeIn animated m_V-2x'>
 				<div className='daw-ad'>
 					{this.renderImage()}
 					<div className='daw-ad-text'>

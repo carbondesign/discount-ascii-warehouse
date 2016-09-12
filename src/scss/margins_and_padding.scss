@@ -1,7 +1,25 @@
 @import 'theme';
+.m_T-0{
+	margin-top:0px !important;
+}
 .m_R-0{
 	margin-right:0px !important;
 }
+.m_V-0{
+	margin-bottom: 0;
+	margin-top: 0;
+}
+.m_V-2x{
+	margin-bottom: 2 * $spacingunit;
+	margin-top: 2 * $spacingunit;
+}
+.p_All-2x{
+	padding: 2 * $spacingunit
+}
+.p_B-4x{
+	padding-bottom: 4 * $spacingunit
+}
+
 .p_B-2x{
 	padding-bottom: 2 * $spacingunit
 }

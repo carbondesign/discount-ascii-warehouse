@@ -32,25 +32,47 @@ html {
   -moz-animation-name: fadeIn;
   animation-name: fadeIn; }
 
-.daw-ad {
+.width100 {
+  width: 100%; }
+
+.daw-button {
+  background-color: #eed93e;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  margin-top: 15px; }
+
+.daw-ad-row {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 40.29137%;
-  margin-left: 21.32451%;
-  border: thin solid #ccc; }
-  .daw-ad:last-child {
+  width: 82.94039%; }
+  .daw-ad-row:last-child {
     margin-right: 0; }
-  .daw-ad .ad-image {
-    overflow: hidden;
+  .daw-ad-row .daw-ad {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 31.76157%;
-    height: 200px; }
-    .daw-ad .ad-image:last-child {
+    margin-left: 10.66226%;
+    border: thin solid #ccc;
+    background-color: white;
+    padding-right: 20px; }
+    .daw-ad-row .daw-ad:last-child {
       margin-right: 0; }
-    .daw-ad .ad-image img {
-      height: 100%;
-      min-width: 100%;
-      margin-left: -20%; }
+    .daw-ad-row .daw-ad .ad-image {
+      overflow: hidden;
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%;
+      height: 200px; }
+      .daw-ad-row .daw-ad .ad-image:last-child {
+        margin-right: 0; }
+      .daw-ad-row .daw-ad .ad-image img {
+        height: 100%;
+        min-width: 100%;
+        margin-left: -20%; }

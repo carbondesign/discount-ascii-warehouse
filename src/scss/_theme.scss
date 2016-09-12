@@ -2,6 +2,10 @@
 $spacingunit:10px;
 
 $grey: #ccc;
+$color-blue: #e1f5f7;
+$color-purple: #1c0080;
+$color-green: #0f7303;
+$color-yellow: #eed93e;
 // globals
 .hide {
     display: none;
@@ -32,4 +36,17 @@ $grey: #ccc;
 
 .fadeIn {
     @include animation-name(fadeIn);
+}
+.width100{
+	width: 100%;
+}
+.daw-button{
+	background-color: $color-yellow;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin-top: 15px;
 }
