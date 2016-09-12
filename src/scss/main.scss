@@ -20,13 +20,13 @@ body {
 
     nav{
     	font-family: 'Share Tech Mono';
-    	color:white;
+    	color: rgba(255,255,255, 0.6);
 		padding: $spacingunit 0;
 		background-color: $color-green;
 		position: absolute;
 		top: 0px;
 		left: 0px;
-		font-size: 3em;
+		font-size: 3.75em;
 		height: 70px;
 		width: 100%;
 		z-index: 5;
@@ -34,6 +34,7 @@ body {
 		img{
 			height: 50px;
 			margin-top: $spacingunit;
+			margin-right: 7px;
 		}
 		&.sticky{
 			position: fixed;
@@ -43,7 +44,7 @@ body {
     }
     header{
     	background-color: white;
-    	padding: $spacingunit * 6;
+    	padding: $spacingunit * 4;
     	margin-top: $spacingunit *9;
     	h1{
     		font-family: 'Share Tech Mono';
