@@ -1,3 +1,5 @@
+[![Stories in Ready](https://badge.waffle.io/carbondesign/discount-ascii-warehouse.svg?label=ready&title=Ready)](http://waffle.io/carbondesign/discount-ascii-warehouse)
+
 Discount Ascii Warehouse
 ====
 
